@@ -1,0 +1,13 @@
+# FloraScope is a static export (no server code). Netlify only needs to
+# build it and publish the `out` folder.
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/demo/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

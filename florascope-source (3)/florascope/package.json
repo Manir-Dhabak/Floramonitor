@@ -1,0 +1,36 @@
+{
+  "name": "florascope",
+  "version": "0.11.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "npx --yes serve out -l 4173",
+    "typecheck": "tsc --noEmit -p .",
+    "demo-data": "python3 scripts/generate_demo_data.py",
+    "bench": "tsx scripts/test-detect.ts arr-y2 height && tsx scripts/test-detect.ts mangrove height"
+  },
+  "dependencies": {
+    "geist": "^1.8.1",
+    "geotiff": "^3.0.5",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^1.60.0",
+    "next": "16.4.2",
+    "proj4": "^2.22.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/leaflet": "^1.9.22",
+    "@types/node": "^20",
+    "@types/proj4": "^2.5.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  },
+  "description": "FloraScope by Flora Carbon AI \u2014 in-browser drone dMRV: tree detection, survival, gaps, carbon with uncertainty, pre-audit."
+}
